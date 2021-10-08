@@ -17,10 +17,7 @@ const index = () => {
     try {
       const axr = await axios({
         method: 'post',
-        url: 'http://localhost:3000/api/register',
-        headers: {
-          'Access-Control-Allow-Origin': '*',
-        },
+        url: '/api/register',
         data: formValues,
       })
 
