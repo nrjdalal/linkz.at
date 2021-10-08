@@ -18,6 +18,9 @@ const index = () => {
       const axr = await axios({
         method: 'post',
         url: 'http://localhost:3000/api/register',
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+        },
         data: formValues,
       })
 
@@ -40,9 +43,7 @@ const index = () => {
         </>
       )
     } else
-      return (
-        <div className="mt-2 text-xs text-center text-red-500">&nbsp;</div>
-      )
+      return <div className="mt-2 text-xs text-center text-red-500">&nbsp;</div>
   }
 
   return (
