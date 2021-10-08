@@ -5,8 +5,8 @@ export default async (req, res) => {
   let body, schema, data, response, token
 
   body = {
-    username: req.body.username.toLowerCase(),
-    email: req.body.email.toLowerCase(),
+    username: req.body.username,
+    email: req.body.email,
     password: req.body.password,
   }
 
@@ -47,4 +47,6 @@ export default async (req, res) => {
     res.status(error.response.status).send(error.response.statusText)
     return
   }
+
+  console.log(token)
 }
